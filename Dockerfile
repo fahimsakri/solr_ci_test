@@ -1,4 +1,4 @@
-FROM solr:8.1.1
+FROM solr:8.7.0
 USER root
 RUN apt-get update && \
     apt-get -y install git
