@@ -6,7 +6,6 @@ git clone $GIT_REPO_URL /tmp/repo
 echo "checkecd out your repo"
 cd /tmp/repo
 git checkout $BRANCH
-cp -rvf /tmp/repo/cluster_bootstrap/files/orbis_item/* /tmp/repo/deployment/ansible/files/solr_configs/orbis_item
 
-/opt/docker-solr/scripts/precreate-core orbis_item /tmp/repo/deployment/ansible/files/solr_configs/orbis_item/
-/opt/docker-solr/scripts/precreate-core orbis_autocomplete /tmp/repo/deployment/ansible/files/solr_configs/orbis_autocomplete/
+/opt/docker-solr/scripts/precreate-core $SOLR_CORE_1 $SOLR_COLLECTION_1_CONFIG_PATH
+/opt/docker-solr/scripts/precreate-core $SOLR_CORE_2 $SOLR_COLLECTION_2_CONFIG_PATH
